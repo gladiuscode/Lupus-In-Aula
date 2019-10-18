@@ -7,6 +7,7 @@ target 'LupusInAula' do
 
   # Pods for LupusInAula
 pod 'Firebase'
+pod 'Firebase/Firestore'
 
   target 'LupusInAulaTests' do
     inherit! :search_paths

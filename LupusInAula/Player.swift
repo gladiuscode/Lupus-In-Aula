@@ -9,9 +9,12 @@
 import Foundation
 
 struct Player {
-    let nickname : String
-    let status : Bool
+    let name: String
     let role: Roles
+    var isAlive: Bool
+    let isHost: Bool
+    var vote: String
+    
 }
 
 enum Roles {
@@ -22,7 +25,7 @@ enum Roles {
 }
 
 func main (){
-    let pl = Player(nickname: "cioa", status: true, role: Roles.student)
+    let pl = Player(name: "Player1", role: Roles.student, isAlive: true, isHost: true, vote: "Player2")
     
     print("\(pl)")
 }
