@@ -30,39 +30,32 @@ class ViewController: UIViewController {
                 "host" : true
         ])
     
-        let player = Player.init(name: "Marco", role: Roles.cheater, isAlive: true, isHost: false, vote: "")
-        let dictionary: [String : Any] = [
-            "name" : player.name,
-            "role" : "Cheater",
-            "isAlive" : player.isAlive,
-            "isHost" : player.isHost,
-            "vote" : player.vote
-        ]
+       
         
         /// Add another data in path:  Games/Stanza1/Players
-        database.collection(databaseName).document("Stanza1")
-            .collection(collectionPlayers).addDocument(data: dictionary)
-        
+//        database.collection(databaseName).document("Stanza1")
+//            .collection(collectionPlayers).addDocument(data: dictionary)
+//
         
         /// Print all collection "Players"
-        database.collection(databaseName).document("Stanza1")
-            .collection(collectionPlayers).getDocuments{ (snapshot, error) in
-            if let err = error {
-                print(err.localizedDescription)
-                return
-            }
-            
-            if let data = snapshot?.documents {
-                for element in data{
-                    print(element.data())
-                }
-            }
-        }
+//        database.collection(databaseName).document("Stanza1")
+//            .collection(collectionPlayers).getDocuments{ (snapshot, error) in
+//            if let err = error {
+//                print(err.localizedDescription)
+//                return
+//            }
+//
+//            if let data = snapshot?.documents {
+//                for element in data{
+//                    print(element.data())
+//                }
+//            }
+//        }
         
         /// Try a RemoteDatabaseManager function
-        let RoomName: String = "Stanza1"
-        let databaseManager = RemoteDatabaseManager.init()
-        
+//        let RoomName: String = "Stanza1"
+//        let databaseManager = RemoteDatabaseManager.init()
+//        
         /// Delete collection "Players" and "Stanza1"
         //databaseManager.resetRoomBy(nameOfRoom: RoomName)
         

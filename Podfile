@@ -6,7 +6,6 @@ target 'LupusInAula' do
   use_frameworks!
 
   # Pods for LupusInAula
-pod 'Firebase'
 pod 'Firebase/Firestore'
 
   target 'LupusInAulaTests' do
