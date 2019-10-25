@@ -42,31 +42,13 @@ struct Player: Playing {
 
 func main (){
     
-    let player1 = Player(nickname: "Gino", roleType: nil, isAlive: true, isHost: nil, vote: nil)
-    let player2 = Player(nickname: "Mario", roleType: nil, isAlive: true, isHost: nil, vote: nil)
-    let player3 = Player(nickname: "Andrea", roleType: nil, isAlive: true, isHost: nil, vote: nil)
-    let player4 = Player(nickname: "Pino", roleType: nil, isAlive: true, isHost: nil, vote: nil)
-    let player5 = Player(nickname: "Gioele", roleType: nil, isAlive: true, isHost: nil, vote: nil)
-    let player6 = Player(nickname: "Alessandro", roleType: nil, isAlive: true, isHost: nil, vote: nil)
-    let player7 = Player(nickname: "Mike", roleType: nil, isAlive: true, isHost: nil, vote: nil)
-    let player8 = Player(nickname: "Francesco", roleType: nil, isAlive: true, isHost: nil, vote: nil)
-    let players = [player1, player2, player3, player4, player5, player6, player7, player8]
-    let playersWithAssignedRoles: [Playing]
-    
-    if (checkValidStart(withPlayers: players)) {
-        playersWithAssignedRoles = assignPlayersRole(withPlayers: players)
-    }
 }
 
 
 // Check if the game can start
 func checkValidStart(withPlayers players: [Playing]) -> Bool {
     
-    if (players.count < 8) {
-        return false
-    }
-    
-    return true
+    return players.count >= 8
     
 }
 
@@ -76,6 +58,10 @@ func assignPlayersRole(withPlayers players: [Playing]) -> [Playing] {
     var resultPlayers = [Player]()
     var wolvesToAssign = players.count < 16 ? 2 : 3
     var teacherToAssign = 1
+    
+    guard players.isEmpty else {
+        return players
+    }
     
     // Assigning cheater role
     for _ in 0..<wolvesToAssign {
