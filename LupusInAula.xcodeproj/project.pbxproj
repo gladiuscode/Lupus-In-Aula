@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		27DD983F62489ECBF6CAD4A9 /* Pods_LupusInAula.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7ABB273A22156CA3E5F5631 /* Pods_LupusInAula.framework */; };
 		A31C52262359C4B1004F0BA5 /* RemoteDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31C52252359C4B1004F0BA5 /* RemoteDatabaseManager.swift */; };
-		A31C52282359C64A004F0BA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A31C52272359C64A004F0BA5 /* GoogleService-Info.plist */; };
 		A3604F5D2350728E004493AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3604F5C2350728E004493AA /* AppDelegate.swift */; };
 		A3604F5F2350728E004493AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3604F5E2350728E004493AA /* ViewController.swift */; };
 		A3604F622350728E004493AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3604F602350728E004493AA /* Main.storyboard */; };
@@ -35,7 +34,6 @@
 		68CDCC912296EC2239AAAA6E /* Pods-LupusInAula.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LupusInAula.release.xcconfig"; path = "Target Support Files/Pods-LupusInAula/Pods-LupusInAula.release.xcconfig"; sourceTree = "<group>"; };
 		8500468553339C882227196B /* Pods-LupusInAulaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LupusInAulaTests.debug.xcconfig"; path = "Target Support Files/Pods-LupusInAulaTests/Pods-LupusInAulaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A31C52252359C4B1004F0BA5 /* RemoteDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDatabaseManager.swift; sourceTree = "<group>"; };
-		A31C52272359C64A004F0BA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3604F592350728E004493AA /* LupusInAula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LupusInAula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3604F5C2350728E004493AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3604F5E2350728E004493AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 				A3604F632350728F004493AA /* Assets.xcassets */,
 				A3604F652350728F004493AA /* LaunchScreen.storyboard */,
 				A3604F682350728F004493AA /* Info.plist */,
-				A31C52272359C64A004F0BA5 /* GoogleService-Info.plist */,
 				F2A3626F2359BD6400BB0A26 /* Player.swift */,
 				A31C52252359C4B1004F0BA5 /* RemoteDatabaseManager.swift */,
 			);
@@ -222,7 +219,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3604F672350728F004493AA /* LaunchScreen.storyboard in Resources */,
-				A31C52282359C64A004F0BA5 /* GoogleService-Info.plist in Resources */,
 				A3604F642350728F004493AA /* Assets.xcassets in Resources */,
 				A3604F622350728E004493AA /* Main.storyboard in Resources */,
 			);

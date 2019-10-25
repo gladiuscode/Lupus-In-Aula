@@ -8,24 +8,109 @@
 
 import Foundation
 
-struct Player {
-    let name: String
-    let role: Roles
-    var isAlive: Bool
-    let isHost: Bool
-    var vote: String
+let minimumPlayersnumber = 8
+let maximumPlayesrNumber = 24
+
+protocol Playing {
+    
+    var nickname: String { get }
+    var roleType: RoleType? { get set }
+    var isAlive: Bool { get set }
+    var isHost: Bool? { get }
+    var vote: String? { get set }
     
 }
 
-enum Roles {
-    case teacher
-    case student
-    case cheater
+enum RoleType {
+    
+    case teacher // veggente 🔮
+    case student // contadino 👩🏻‍🌾
+    case cheater // lupo 🐺
+    
+}
+
+
+struct Player: Playing {
+   
+    let nickname: String
+    var roleType: RoleType?
+    var isAlive: Bool
+    let isHost: Bool?
+    var vote: String?
     
 }
 
 func main (){
-    let pl = Player(name: "Player1", role: Roles.student, isAlive: true, isHost: true, vote: "Player2")
     
-    print("\(pl)")
+    let player1 = Player(nickname: "Gino", roleType: nil, isAlive: true, isHost: nil, vote: nil)
+    let player2 = Player(nickname: "Mario", roleType: nil, isAlive: true, isHost: nil, vote: nil)
+    let player3 = Player(nickname: "Andrea", roleType: nil, isAlive: true, isHost: nil, vote: nil)
+    let player4 = Player(nickname: "Pino", roleType: nil, isAlive: true, isHost: nil, vote: nil)
+    let player5 = Player(nickname: "Gioele", roleType: nil, isAlive: true, isHost: nil, vote: nil)
+    let player6 = Player(nickname: "Alessandro", roleType: nil, isAlive: true, isHost: nil, vote: nil)
+    let player7 = Player(nickname: "Mike", roleType: nil, isAlive: true, isHost: nil, vote: nil)
+    let player8 = Player(nickname: "Francesco", roleType: nil, isAlive: true, isHost: nil, vote: nil)
+    let players = [player1, player2, player3, player4, player5, player6, player7, player8]
+    let playersWithAssignedRoles: [Playing]
+    
+    if (checkValidStart(withPlayers: players)) {
+        playersWithAssignedRoles = assignPlayersRole(withPlayers: players)
+    }
+}
+
+
+// Check if the game can start
+func checkValidStart(withPlayers players: [Playing]) -> Bool {
+    
+    if (players.count < 8) {
+        return false
+    }
+    
+    return true
+    
+}
+
+// Assigning roles when the game is valid and started
+func assignPlayersRole(withPlayers players: [Playing]) -> [Playing] {
+    
+    var resultPlayers = [Player]()
+    var wolvesToAssign = players.count < 16 ? 2 : 3
+    var teacherToAssign = 1
+    
+    // Assigning cheater role
+    for _ in 0..<wolvesToAssign {
+        
+        var cheater: Playing
+        
+        repeat {
+            cheater = players[Int.random(in: 0...players.count)]
+            let playerToAdd = Player(nickname: cheater.nickname, roleType: .cheater, isAlive: true, isHost: cheater.isHost, vote: nil)
+            resultPlayers.append(playerToAdd)
+            wolvesToAssign -= 1
+        } while (cheater.roleType == nil)
+        
+    }
+    
+    // Assigning teacher role
+    var teacher: Playing
+    repeat {
+        teacher = players[Int.random(in: 0...players.count)]
+        let playerToAdd = Player(nickname: teacher.nickname, roleType: .teacher, isAlive: true, isHost: teacher.isHost, vote: nil)
+        resultPlayers.append(playerToAdd)
+        teacherToAssign = 0
+    } while (teacher.roleType == nil && teacherToAssign != 0)
+    
+    // Assigning student role
+    for var player in players {
+        if player.roleType != nil {
+            player.roleType = RoleType.student
+        }
+    }
+    
+    for player in resultPlayers {
+        print(player)
+    }
+    
+    return resultPlayers
+    
 }
