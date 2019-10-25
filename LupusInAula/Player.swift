@@ -48,7 +48,7 @@ func main (){
 // Check if the game can start
 func checkValidStart(withPlayers players: [Playing]) -> Bool {
     
-    return players.count >= 8
+    return players.count >= minimumPlayersnumber && players.count <= maximumPlayesrNumber
     
 }
 
@@ -59,7 +59,15 @@ func assignPlayersRole(withPlayers players: [Playing]) -> [Playing] {
     var wolvesToAssign = players.count < 16 ? 2 : 3
     var teacherToAssign = 1
     
-    guard players.isEmpty else {
+    guard players.isEmpty == false else {
+        return players
+    }
+    
+    guard players.count >= minimumPlayersnumber else {
+        return players
+    }
+    
+    guard players.count <= maximumPlayesrNumber else {
         return players
     }
     
