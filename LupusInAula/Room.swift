@@ -12,6 +12,16 @@ import Foundation
 
 // Struttura tipo player
 // Funzione su giorno e notte
-// Remove from the room
+// Disable from the room
 // Funzione della ricezione delle persone.
 
+func dayOrNight(isDay: Bool, isVote: Bool, rolePlayer: String){
+    
+    let rdm = RemoteDatabaseManager()
+
+    if(rolePlayer == "Lupo" && isVote == true){
+        isDay = false;
+    }else{
+        isDay = true;
+    }
+}
