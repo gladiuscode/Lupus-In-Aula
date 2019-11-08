@@ -8,9 +8,12 @@
 
 import Firebase
 
+
 /// The class in charge of handling the Firebase
 /// database integration.
 class RemoteDatabaseManager {
+
+    let gitGodPlsDontFuckThisUp = true
     
     /// Names for collections on database
     let databaseName: String = "Games"
