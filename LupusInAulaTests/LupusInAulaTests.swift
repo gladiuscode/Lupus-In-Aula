@@ -13,19 +13,22 @@ class LupusInAulaTests: XCTestCase {
 
     func testAssignRoleLogic_arrayOfPlayersIsEmpty_shouldReturnEmptyArray() {
         
-        let result = assignPlayersRole(withPlayers: [Playing]())
+        let gameManager = GameManager.init(withPlayers: [])
         
-        XCTAssertTrue(result.isEmpty)
-        XCTAssertEqual(result.count, 0)
+        let result = gameManager.assignPlayersRole()
+        
+        XCTAssertTrue(result == nil)
         
     }
     
     func testAssignRoleLogic_arrayOfPlayersWithOnePlayer_shouldReturnEmptyArray() {
         
-        let player = Player(nickname: "test", roleType: .cheater, isAlive: true, isHost: nil, vote: nil)
+        let player = Player(nickname: "test", roleType: nil, isAlive: true, isHost: nil, vote: nil)
         
-        let result = assignPlayersRole(withPlayers: [player])
-        XCTAssertTrue(result.isEmpty)
+        let gameManager = GameManager.init(withPlayers: [player])
+        
+        let result = gameManager.assignPlayersRole()
+        XCTAssertTrue(result == nil)
         
     }
     
