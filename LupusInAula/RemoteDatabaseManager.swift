@@ -26,7 +26,7 @@ class RemoteDatabaseManager {
     /// This function will start a room, it will check wether it already exists with the given name
     func initRoomBy(nameOfRoom name: String) {
         
-            // Save host
+        // Save host
         //saveUser(nickname: "Pippo", isHost: true)
         database.collection(databaseName).document(name).addSnapshotListener{ documentSnapshot, error in
             
