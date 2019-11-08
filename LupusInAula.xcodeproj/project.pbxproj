@@ -19,6 +19,7 @@
 		A3DD904C2362FE9D006279FB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DD904B2362FE9D006279FB /* HomeViewController.swift */; };
 		C58A903A2375838F007B9FCF /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58A90392375838F007B9FCF /* GameManager.swift */; };
 		D9603BBABC31EA76B4F9E727 /* Pods_LupusInAulaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D2EF8741D608472C5682E4 /* Pods_LupusInAulaTests.framework */; };
+		F25C287D2375889F00F21CD6 /* ColorMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25C287C2375889F00F21CD6 /* ColorMap.swift */; };
 		F2A362702359BD6400BB0A26 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A3626F2359BD6400BB0A26 /* Player.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		C58A90392375838F007B9FCF /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		C7ABB273A22156CA3E5F5631 /* Pods_LupusInAula.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LupusInAula.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C890DAE774A3A3B0C32458CE /* Pods-LupusInAula.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LupusInAula.debug.xcconfig"; path = "Target Support Files/Pods-LupusInAula/Pods-LupusInAula.debug.xcconfig"; sourceTree = "<group>"; };
+		F25C287C2375889F00F21CD6 /* ColorMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorMap.swift; path = "../../../../Downloads/Lupus-In-Aula-master 3/LupusInAula/ColorMap.swift"; sourceTree = "<group>"; };
 		F2A3626F2359BD6400BB0A26 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 				A31C52252359C4B1004F0BA5 /* RemoteDatabaseManager.swift */,
 				A3DD904B2362FE9D006279FB /* HomeViewController.swift */,
 				C58A90392375838F007B9FCF /* GameManager.swift */,
+				F25C287C2375889F00F21CD6 /* ColorMap.swift */,
 			);
 			path = LupusInAula;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				F2A362702359BD6400BB0A26 /* Player.swift in Sources */,
 				A31C52262359C4B1004F0BA5 /* RemoteDatabaseManager.swift in Sources */,
 				A3604F5D2350728E004493AA /* AppDelegate.swift in Sources */,
+				F25C287D2375889F00F21CD6 /* ColorMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
