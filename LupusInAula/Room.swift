@@ -8,29 +8,29 @@
 
 import Foundation
 
-
-
 // Struttura tipo player
 // Funzione su giorno e notte
 // Disable from the room
 // Funzione della ricezione delle persone.
 
-func dayOrNight(isDay: Bool, isVote: Bool, rolePlayer: String){
-    
-    let rdm = RemoteDatabaseManager()
-
-    if(rolePlayer == "Lupo" && isVote == true){
-        isDay = false;
-    }else{
-        isDay = true;
-    }
+//func dayOrNight(isDay: Bool, isVote: Bool, rolePlayer: String){
+//
+//    let rdm = RemoteDatabaseManager()
+//
+//    if(rolePlayer == "Lupo" && isVote == true){
+//        isDay = false;
+//    }else{
+//        isDay = true;
+//    }
+//}
 
 func disableRole(name: String, isAlive: Bool) {
     //Riprova
     
     let rdm = RemoteDatabaseManager()
     
-    
+}
+
 // Disable from6 the room
 // Funzione della ricezione delle persone.
 
