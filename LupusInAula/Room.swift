@@ -26,7 +26,7 @@ func dayOrNight(isDay: Bool, isVote: Bool, rolePlayer: String){
     }
 
 func disableRole(name: String, isAlive: Bool) {
-    //Non so che fare
+    //Riprova
     
     let rdm = RemoteDatabaseManager()
     
