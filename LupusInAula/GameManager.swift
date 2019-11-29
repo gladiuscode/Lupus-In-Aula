@@ -14,6 +14,9 @@ class GameManager {
     let maximumPlayesrNumber = 24
     let players: [Playing]
     
+    /// To initialize when the game starts.
+    var timeManager: TimeManager?
+    
     init(withPlayers players: [Playing]) {
         self.players = players
     }

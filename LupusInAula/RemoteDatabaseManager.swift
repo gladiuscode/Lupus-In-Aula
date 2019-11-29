@@ -8,6 +8,19 @@
 
 import Firebase
 
+// TODO:
+/* 1) to get the available rooms
+    2) to allow entering one specific room
+    3) to create a player with a specific nickname related to the selected room
+    4) to receive the room in a "ready to play" status from db
+    5) to read the other available players in the room
+    6) to vote for a specific player
+    7) to read the day / night room status
+    8) to receive the current game status (string)
+    9) to reset the current status in order to start a new game
+ */
+
+
 
 /// The class in charge of handling the Firebase
 /// database integration.

@@ -60,4 +60,38 @@ class LupusInAulaTests: XCTestCase {
 //    }
 //
 
+    
+    func testGameManager() {
+        
+        let player1 = Player(nickname: "Test1",
+                             roleType: nil,
+                             isAlive: true,
+                             isHost: nil,
+                             vote: nil)
+        let sut = GameManager(withPlayers: [player1])
+        
+        let result = sut.assignPlayersRole()
+        
+        print(result)
+        
+    }
+    
+    func testTimeManager() {
+        
+        let exp = expectation(description: #function)
+        
+        let sut = TimeManager()
+        
+        sut.whenDayStatusHasChanged = { dayStatus in
+            
+            print(dayStatus)
+            
+        }
+        
+        sut.start()
+        
+        waitForExpectations(timeout: 20, handler: nil)
+        
+    }
+    
 }

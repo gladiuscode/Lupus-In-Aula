@@ -8,24 +8,66 @@
 
 import Foundation
 
+enum DayStatus {
+    case day
+    case night
+}
 
+/// In charge of handling the time.
 class TimeManager {
     
-    static let timeToChangeDayState: TimeInterval = 60
+    // MARK: - Properties
     
-    var currentTime: Date = Date() // on launch is now
-    var isDay = false
-    var isCompleted = false
+    private let timeToChangeDayState: TimeInterval
+    private var timer: Timer?
     
-    private init() { }
+    /// The current time.
+    var currentTime: Date {
+        return Date()
+    }
     
-    static let shared: TimeManager = TimeManager()
+    /// Whether is day or not.
+    private var isDay = false
     
+    var dayStatus: DayStatus {
+        return isDay ? .day : .night
+    }
+    
+    /// Fired when the day status changes.
+    var whenDayStatusHasChanged: ((_ dayStatus: DayStatus) -> Void)?
+    
+    // MARK: - Initializers
+    
+    public init(timeRequiredToSwitchBetweenDayStatus requiredTime: TimeInterval) {
+        self.timeToChangeDayState = requiredTime
+    }
+    
+    // MARK: - Business Logic
+    
+    /// Toggles the day status.
     public func toggleDayStatus() {
         isDay = !isDay
     }
     
-    
-    
+    /// Starts the timer.
+    public func start(isDay: Bool = true) {
+        
+        self.isDay = isDay
+        
+        // to notificate the first time TBC
+        self.whenDayStatusHasChanged?(self.dayStatus)
+        
+        timer = Timer.scheduledTimer(withTimeInterval: self.timeToChangeDayState,
+                                     repeats: false,
+                                     block:
+            { timer in
+                
+                self.toggleDayStatus()
+                
+                // to notificate
+                self.whenDayStatusHasChanged?(self.dayStatus)
+        })
+        
+    }
     
 }
