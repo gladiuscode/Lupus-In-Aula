@@ -15,6 +15,9 @@
 		A3604F642350728F004493AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3604F632350728F004493AA /* Assets.xcassets */; };
 		A3604F672350728F004493AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3604F652350728F004493AA /* LaunchScreen.storyboard */; };
 		A3604F722350728F004493AA /* LupusInAulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3604F712350728F004493AA /* LupusInAulaTests.swift */; };
+		A365DA232387F521006F9769 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = A365DA222387F521006F9769 /* Room.swift */; };
+		A365DA252387F881006F9769 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A365DA242387F881006F9769 /* TimeManager.swift */; };
+		A3B6C1DD23758C8F0041CC5C /* ColorMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B6C1DC23758C8F0041CC5C /* ColorMap.swift */; };
 		A3DD904A2362F782006279FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3DD90492362F782006279FB /* GoogleService-Info.plist */; };
 		A3DD904C2362FE9D006279FB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DD904B2362FE9D006279FB /* HomeViewController.swift */; };
 		C58A903A2375838F007B9FCF /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58A90392375838F007B9FCF /* GameManager.swift */; };
@@ -47,6 +50,9 @@
 		A3604F6D2350728F004493AA /* LupusInAulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LupusInAulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3604F712350728F004493AA /* LupusInAulaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LupusInAulaTests.swift; sourceTree = "<group>"; };
 		A3604F732350728F004493AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A365DA222387F521006F9769 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		A365DA242387F881006F9769 /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
+		A3B6C1DC23758C8F0041CC5C /* ColorMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMap.swift; sourceTree = "<group>"; };
 		A3DD90492362F782006279FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3DD904B2362FE9D006279FB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A5D2EF8741D608472C5682E4 /* Pods_LupusInAulaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LupusInAulaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +125,9 @@
 		A3604F5B2350728E004493AA /* LupusInAula */ = {
 			isa = PBXGroup;
 			children = (
+				A365DA222387F521006F9769 /* Room.swift */,
+				A365DA242387F881006F9769 /* TimeManager.swift */,
+				A3B6C1DC23758C8F0041CC5C /* ColorMap.swift */,
 				A3DD90492362F782006279FB /* GoogleService-Info.plist */,
 				A3604F5C2350728E004493AA /* AppDelegate.swift */,
 				A3604F5E2350728E004493AA /* ViewController.swift */,
@@ -314,10 +323,13 @@
 			files = (
 				A3DD904C2362FE9D006279FB /* HomeViewController.swift in Sources */,
 				C58A903A2375838F007B9FCF /* GameManager.swift in Sources */,
+				A365DA232387F521006F9769 /* Room.swift in Sources */,
 				A3604F5F2350728E004493AA /* ViewController.swift in Sources */,
 				F2A362702359BD6400BB0A26 /* Player.swift in Sources */,
+				A365DA252387F881006F9769 /* TimeManager.swift in Sources */,
 				A31C52262359C4B1004F0BA5 /* RemoteDatabaseManager.swift in Sources */,
 				A3604F5D2350728E004493AA /* AppDelegate.swift in Sources */,
+				A3B6C1DD23758C8F0041CC5C /* ColorMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
